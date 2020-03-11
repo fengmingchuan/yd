@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        html{
+            font-size: 10px;
+
+        }
+        body{
+          background: red;
+            width: 100%;
+        }
+
+        .cl2{
+            background-color: #ffffff;
+            min-width: 120px;
+        }
+        .r-top{
+            margin-top: 5px;
+        }
+         .r-top  li{
+            margin-top: 8px;
+         }
+        .mum-n{
+            margin-top: 20px;
+        }
+        .mum-n ul{
+            background-color: #F7FCFE;
+            padding-top: 8px;
+            padding-left: 10px;
+            padding-bottom: 8px;
+        }
+        .mum-n ul li{
+            margin-top: 10px;
+            list-style: none;
+        }
+        .carousel-control span svg{
+            margin-top: 100px;
+        }
+        .c10{
+            min-width: 790px;
+        }
+    </style>
+
+    <!--
+        <link rel="stylesheet" href="../项目/css/bootstrap.css"/>
+     <link rel="stylesheet" href="css/bootstrap.css"/>
+   -->
+
+   <!-- <link rel="style
+   sheet" href="css/bootstrap.css"/>--><!-- <link rel="stylesheet" href="css/bootstrap.css"/>-->
+   <!-- <link href="css/bootstrap.css" rel="stylesheet">-->
+
+  <!--  <script type="text/javascript"  src="js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="js/layui/layui.js"></script>-->
+
+   <!-- <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    &lt;!&ndash; 改成你的路径 &ndash;&gt;
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+ &lt;!&ndash;   <link href="js/layui/css/layui.css" rel="stylesheet" media="all">&ndash;&gt;
+    <script type="text/javascript" src="js/layui/layui.js"></script>-->
+
+</head>
+
+<body>
+   <div class="container">
+       <!--右 上-->
+       <div class="row">
+           <div class="col-md-2 cl2"></div>
+           <div class="col-md-10 c10">
+               <div class="row " style="margin-left: 16px;margin-bottom: 20px" >
+                 <h4>今天是你在li哩的第0天</h4>
+               </div>
+               <div class="row">
+                   <div class="col-md-7">
+                       <div id="carouselMenu" class="carousel slide">
+                           <ol class="carousel-indicators">
+                               <li data-target="#carouselMenu" data-slide-to="0" class="active"></li>
+                               <li data-target="#carouselMenu" data-slide-to="1" ></li>
+                               <li data-target="#carouselMenu" data-slide-to="2" ></li>
+                               <li data-target="#carouselMenu" data-slide-to="3" ></li>
+                               <li data-target="#carouselMenu" data-slide-to="4" ></li>
+                               <li data-target="#carouselMenu" data-slide-to="5" ></li>
+                               <li data-target="#carouselMenu" data-slide-to="6" ></li>
+                               <li data-target="#carouselMenu" data-slide-to="7" ></li>
+                           </ol>
+                           <div class="carousel-inner">
+                               <div class="item active"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                           </div>
+                           <a class="left  carousel-control " href="#carouselMenu" data-slide="prev"><span><svg t="1578806262327" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3367" width="32" height="32"><path d="M190.3221875 507.30875c0-7.7296875 2.9690625-14.540625 8.9090625-20.4590625l414.9571875-414.9778125c5.94-5.94 12.7734375-8.8846875 20.5021875-8.8846875s14.540625 2.945625 20.4796875 8.8846875l44.5171875 44.540625c5.94 5.94 8.908125 12.75 8.908125 20.4796875 0 7.708125-2.9690625 14.540625-8.908125 20.4796875l-349.959375 349.959375 349.9621875 349.9378125c5.94 5.94 8.908125 12.75 8.908125 20.4796875s-2.9690625 14.5621875-8.9090625 20.5021875l-44.51625 44.51625c-5.94 5.94-12.75 8.908125-20.4796875 8.908125s-14.5621875-2.9690625-20.5021875-8.9090625l-414.9571875-414.958125c-5.938125-5.938125-8.9090625-12.7734375-8.9090625-20.5021875z" p-id="3368"></path></svg></span></a>
+                           <a class="carousel-control right" href="#carouselMenu" data-slide="next"><span><svg t="1578806290738" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3583" width="32" height="32"><path d="M648.41999999 512l-378.48-378.48a59.46 59.46 0 1 1 84.12-84.12L774.59999999 470a59.46 59.46 0 0 1 0 84L353.99999999 974.6a59.46 59.46 0 1 1-84-84.11999999L648.35999999 512z" p-id="3584"></path></svg></span></a>
+                       </div>
+
+                   </div>
+                   <div class="col-md-5">
+                       <div class="row">
+                           <div class="col-md-4">热门活动</div>
+                           <div class="col-md-5"></div>
+                           <div class="col-md-3 r-r-lg">
+                               <a href="#" >更多<svg t="1578797519234" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1493" width="16" height="16"><path d="M642.174 504.594c7.99 7.241 7.897 17.58-0.334 24.782L332.62 799.945c-8.867 7.759-9.766 21.236-2.007 30.103 7.758 8.867 21.236 9.766 30.103 2.007l309.221-270.569c27.429-24 27.792-64.127 0.89-88.507L360.992 192.192c-8.73-7.912-22.221-7.248-30.133 1.482-7.912 8.73-7.248 22.222 1.482 30.134l309.833 280.786z" fill="" p-id="1494"></path></svg></span></a></div>
+                       </div>
+                       <div class="row">
+
+                               <ul class="r-top">
+                                   <li>寒假volofo一起学习吧</li>
+                                   <li>春节连连看</li>
+                               </ul>
+
+
+                       </div>
+                       <br>
+                       <div class="row">
+                           <img src="img2.jpg" alt=""/>
+                       </div>
+
+
+                   </div>
+               </div>
+               <!--右 下-->
+               <div class="row" style="margin-left: 16px;margin-top: 20px">
+
+                     <div class="row">
+
+                             <ul class="nav nav-tabs top-nav">
+                                 <li class="active"><a href="#tab1" data-toggle="tab">视频数据</a></li>
+                                 <li><a  data-toggle="tab" href="#tab2">专栏数据</a></li>
+                             </ul>
+
+                     </div>
+                     <div class="row">
+                         <div class="col-md-12">
+                         <div class="row tab-content ">
+
+                             <div id="tab1" class="tab-pane active">
+                               <div class=" mum-n row">
+                                   <div class="col-md-4">
+                                       <ul>
+                                           <li><a href="">粉丝数</a></li>
+                                           <li>0</li>
+                                           <li>昨日</li>
+                                       </ul>
+                                   </div>
+                                   <div class="col-md-4">
+                                       <ul>
+                                           <li><a href="">播放数量</a></li>
+                                           <li>0</li>
+                                           <li>昨日</li>
+                                       </ul>
+                                   </div>
+                                   <div class="col-md-4">
+                                       <ul>
+                                           <li><a href="">评论数量</a></li>
+                                           <li>0</li>
+                                           <li>昨日</li>
+                                       </ul>
+                                   </div>
+                               </div>
+                                 <div class=" mum-n row">
+                                     <div class="col-md-4">
+                                         <ul>
+                                             <li><a href="">弹幕</a></li>
+                                             <li>0</li>
+                                             <li>昨日</li>
+                                         </ul>
+                                     </div>
+                                     <div class="col-md-4">
+                                         <ul>
+                                             <li><a href="">点赞</a></li>
+                                             <li>0</li>
+                                             <li>昨日</li>
+                                         </ul>
+                                     </div>
+                                     <div class="col-md-4">
+                                         <ul>
+                                             <li><a href="">分享</a></li>
+                                             <li>0</li>
+                                             <li>昨日</li>
+                                         </ul>
+                                     </div>
+                                 </div>
+
+                             </div>
+                             <!--专栏-->
+                             <div class="tab-pane" id="tab2">
+                                 <p>译文：
+                                     慈母用手中的针线，为远行的儿子赶制身上的衣衫。
+
+                                     临行前一针针密密地缝缀，怕的是儿子回来得晚衣服破损。
+
+                                     有谁敢说，子女像小草那样微弱的孝心，能够报答得了像春晖普泽的慈母恩情呢？
+
+                                     母爱的伟大贯穿了中华上下五千年
+                                     普天下最平凡的是母亲，最伟大的也是母亲。从来没有一种文字能写尽母爱，文章是有长短尽头的，而母爱，却是无痕的岁月，贯穿着我们生命的全部。</p>
+                             </div>
+
+                             </div>
+                         </div>
+
+
+                 </div>
+
+
+               </div>
+           </div>
+       </div>
+
+   </div>
+   <script>
+
+       jQuery.noConflict();
+       jQuery(function($){
+           $(".cl2").load("comen-left.html");
+           $("#carouselMenu").carousel({
+               interval: 500,
+               wrap: true
+           });
+       })
+
+
+   </script>
+  <!-- <script>
+
+      layui.use('carousel', function(){
+           var carousel = layui.carousel;
+           //建造实例
+           carousel.render({
+               elem: '#test1'
+               ,width: '100%' //设置容器宽度
+               ,arrow: 'always' //始终显示箭头
+               //,anim: 'updown' //切换动画方式
+           });
+       });-->
+
+</body>
+</html>

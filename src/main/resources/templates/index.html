@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en"  xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+    <style>
+        html{
+            font-size: 10px;
+        }
+
+        .l-nav li{
+            margin-top: 50px;
+        }
+        ul li a{
+            font-size: 1.5rem;
+            color:#A3A3A3 ;
+        }
+        ul li{
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color:#A3A3A3 ;
+            list-style: none;
+        }
+
+         .content{
+             display: flex;
+
+         }
+        .cl2{
+            flex: 2;
+            height: 100%;
+            min-width: 180px;
+           overflow: scroll;
+
+        }
+        .cl10{
+            flex: 10;
+            min-width: 850px;
+        }
+        .r-nav li{
+            padding-left: 50px;
+        }
+        .gf-btom{
+            margin-left:150px;
+            margin-top:100px;
+            color: #C1C1C1;
+
+        }
+        .gf-btom a{
+            margin-left: 20px;
+        }
+        .container{
+            display: flex;
+        }
+
+
+    </style>
+</head>
+<body>
+ <div class=" container ">
+     <div class="row content">
+         <div class="col-md-2 cl2"></div>
+         <div class="col-md-10 cl10 " style="padding-left: 200px">
+             <!--上传视频-->
+             <div class="right-upload">
+                 <ul class="nav nav-pills r-nav">
+                     <li class="active"><a data-toggle="pill" href="#pill1">视频投稿</a></li>
+                     <li><a data-toggle="pill" href="#pill2">专栏投稿</a></li>
+                     <li><a data-toggle="pill" href="#pill3">互动视频投稿</a></li>
+                     <li><a data-toggle="pill" href="#pill4">音频投稿</a></li>
+                     <li><a data-toggle="pill" href="#pill5">象博投稿</a></li>
+                 </ul>
+                 <hr/>
+                 <div class="tab-content">
+                     <div class="tab-pane  active" id="pill1">
+
+                         <button class="btn-success btn-lg" style="text-align: center;padding: 10px 50px 10px 50px;background-color: #00b5e5;border: none;margin-top: 200px;margin-left: 200px">上传视频 </button>
+                    <div class="gf-btom"  >
+                         <a href="norm.html">禁止发布的视频
+                         </a>
+                         <a href="norm.html">
+                             视频大小
+                         </a>
+                         <a href="norm.html">
+                               视频格式
+                         </a>
+                         <a href="norm.html">
+                             视频码率
+                     </a>
+                    </div>
+                     </div>
+                     <div  class="tab-pane fade " id="pill2"  ></div>
+                     <div class="tab-pane fade " id="pill3"></div>
+                     <div class="tab-pane fade " id="pill4"></div>
+                     <div class="tab-pane fade " id="pill5"></div>
+
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+<script>
+    jQuery.noConflict();//让渡$的使用权，其他脚本库可以使用$
+     jQuery(function($){
+         $(".cl2").load("comen-left.html");
+         $(".cz-left").click(function(){
+             $(".cz-left-next").toggle();
+         })
+         $(".qy-left").click(function(){
+             $(".qy-left-next").toggle();
+         })
+         $(".sy-left").click(function(){
+             $(".sy-left-next").toggle();
+         })
+         $(".drop").click(function(){
+             $(".dropdown_1column").toggle();
+         })
+         $(".hd_left").click(function(){
+             $(".hd-left-next").toggle();
+         })
+     })
+
+</script>
+</body>
+</html>
