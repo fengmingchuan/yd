@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+ <!--   <link rel="stylesheet" href="css/bootstrap.css"/>
+-->
+
+
+    <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+    <script type="text/javascript"  th:src="@{/js/laydate/laydate.js}"></script> <!-- 改成你的路径 -->
+    <style>
+        body{
+            background-color: #F8F8F8;
+            min-width: 1000px;
+        }
+        .input-my{
+            text-align: center;
+            float: right;
+        }
+        .c1{
+            margin-top: 8px;
+        }
+        .c1 a{
+            text-decoration:none;
+        }
+        #renge{
+            margin-left: 20px;
+            padding: 2px 8px 2px 8px;
+            border-radius: 2px;
+
+        }
+        .input-data{
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            background-color: #ffffff;
+        }
+
+        .staus-nav{
+            background-color: #ffffff;
+        }
+        .count{
+            margin-left: -40px;
+        }
+        .count li{
+            display: inline-block;
+        }
+       /* .cl2{
+           padding-left: -100px;
+        }*/
+        .media-right-my{
+            margin-right: 20px;
+            list-style: none;
+        }
+        .media-right-my li a{
+            width: 40px;
+            display: block;
+        }
+        .my-content{
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+        .my-content-next{
+            background-color: #ffffff;
+        }
+        .selected{
+            background: none;
+           border-bottom: 4px solid red;
+        }
+    </style>
+
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+
+          <div class="col-md-2 col-xs-12 cl2"></div>
+          <div class="col-md-10 col-xs-12 cl10">
+              <div class="row">
+                  <div class="col-md-12 col-xs-12 ">
+                      <ul class="nav nav-tabs top-nav">
+                          <li class="active  selected" ><a href="#tab1" data-toggle="tab">视频</a></li>
+                          <li><a  data-toggle="tab" href="#tab2">专栏</a></li>
+                          <li><a  data-toggle="tab" href="#tab3">音频</a></li>
+                      </ul>
+                  </div>
+              </div>
+           <!-- &lt;!&ndash;状态栏&ndash;&gt;-->
+
+
+              <div class="row tab-content " style="margin-top: 20px;margin-left: 16px">
+                  <div id="tab1" class="tab-pane active">
+                      <!--状态-->
+                      <div class="row staus-nav">
+                          <div class="col-md-1 col-xs-1 c1">状态</div>
+                          <div class="col-md-1 col-xs-1 c1"><a href="" class="active">全部</a></div>
+                          <div class="col-md-1 col-xs-1 c1"><a href="">已发表</a></div>
+                          <div class="col-md-1 col-xs-1 c1"><a href="">未通过</a></div>
+                          <div class="col-md-2 col-xs-2 c1"><a href="">仅我可见</a></div>
+                          <div class="col-md-4 col-xs-2">
+                              <div class="input-group input-my">
+                                  <input type="text" class="form-control" placeholder="请输入标题"/>
+                                  <a class="input-group-addon">
+<svg t="1578743076326" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1711" width="16" height="16"><path d="M998.417847 968.923523 738.389131 712.967573c68.050929-73.967263 109.909294-171.800228 109.909294-279.479317 0-230.345352-189.746575-417.036095-423.778057-417.036095-234.030475 0-423.77705 186.690742-423.77705 417.036095 0 230.297023 189.746575 416.986758 423.77705 416.986758 101.131452 0 193.870691-34.971414 266.723355-93.126882l261.095991 256.924553c12.70864 12.514315 33.370499 12.514315 46.078132 0C1011.174816 1001.759377 1011.174816 981.436831 998.417847 968.923523L998.417847 968.923523 998.417847 968.923523zM424.520368 786.354882c-198.040115 0-358.5393-157.977996-358.5393-352.86562 0-194.88863 160.499184-352.866627 358.5393-352.866627C622.562497 80.622635 783.110011 238.600632 783.110011 433.489262 783.110011 628.376886 622.562497 786.354882 424.520368 786.354882L424.520368 786.354882 424.520368 786.354882z" p-id="1712"></path></svg>
+                                  </a>
+                              </div>
+
+                          </div>
+                      </div>
+                      <!--搜索-->
+                      <div class="row input-data">
+                          <div class="col-md-5 col-xs-12">
+                          <span>时间</span>
+                          <input readonly="true" placeholder="开始日期  -  结束日期" class="tui2-input" id="renge" type="text" value="">
+                      </div>
+                      </div>
+                      <!--内容-->
+
+                         <div class="row my-content ">
+                             <div class="col-md-12 col-xs-12">共有*条记录</div>
+                         </div>
+                      <!--foreach  start-->
+                          <div class="row my-content-next">
+                            <div class="col-md-12 col-xs-12 media">
+                                <div class=" media-left">
+                                    <img src="5.jpg" style="width: 178px;height: 111px; " alt="d"/>
+
+                                </div>
+                                <div class="media-body">
+                                    <p>清华你好</p>
+                                   <ul class="count">
+                                        <li class="count-item">推荐 1,034</li>
+                                        <li class="count-item">播放 0</li>
+                                        <li class="count-item">点赞 0</li>
+                                        <li class="count-item link">评论 0</li>
+                                        <li class="count-item">收藏 0</li>
+                                        <li class="count-item">分享 0</li>
+                                    </ul>
+                                    <span class="label label-danger">已发表</span>
+                                    <p>2020-1-14</p>
+                                </div>
+                              <div class="media-right">
+                                    <ul class="media-right-my">
+                                        <li><a href="">修改</a></li>
+                                        <li><a href="">数据</a></li>
+                                        <li><a href="">更多</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                      <div class="row">
+                          <div class="col-md-12 col-xs-12 media">
+                              <div class=" media-left">
+                                  <img src="5.jpg" style="width: 178px;height: 111px; " alt="d"/>
+
+                              </div>
+                              <div class="media-body">
+                                  <p>清华你好</p>
+                                  <ul class="count">
+                                      <li class="count-item">推荐 1,034</li>
+                                      <li class="count-item">播放 0</li>
+                                      <li class="count-item">点赞 0</li>
+                                      <li class="count-item link">评论 0</li>
+                                      <li class="count-item">收藏 0</li>
+                                      <li class="count-item">分享 0</li>
+                                  </ul>
+                                  <span class="label label-danger">已发表</span>
+                                  <p>2020-1-14</p>
+                              </div>
+                              <div class="media-right">
+                                  <ul class="media-right-my">
+                                      <li><a href="">修改</a></li>
+                                      <li><a href="">数据</a></li>
+                                      <li><a href="">更多</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12 col-xs-12 media">
+                              <div class=" media-left">
+                                  <img src="5.jpg" style="width: 178px;height: 111px; " alt="d"/>
+
+                              </div>
+                              <div class="media-body">
+                                  <p>清华你好</p>
+                                  <ul class="count">
+                                      <li class="count-item">推荐 1,034</li>
+                                      <li class="count-item">播放 0</li>
+                                      <li class="count-item">点赞 0</li>
+                                      <li class="count-item link">评论 0</li>
+                                      <li class="count-item">收藏 0</li>
+                                      <li class="count-item">分享 0</li>
+                                  </ul>
+                                  <span class="label label-danger">已发表</span>
+                                  <p>2020-1-14</p>
+                              </div>
+                              <div class="media-right">
+                                  <ul class="media-right-my">
+                                      <li><a href="">修改</a></li>
+                                      <li><a href="">数据</a></li>
+                                      <li><a href="">更多</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12 col-xs-12 media">
+                              <div class=" media-left">
+                                  <img src="5.jpg" style="width: 178px;height: 111px; " alt="d"/>
+
+                              </div>
+                              <div class="media-body">
+                                  <p>清华你好</p>
+                                  <ul class="count">
+                                      <li class="count-item">推荐 1,034</li>
+                                      <li class="count-item">播放 0</li>
+                                      <li class="count-item">点赞 0</li>
+                                      <li class="count-item link">评论 0</li>
+                                      <li class="count-item">收藏 0</li>
+                                      <li class="count-item">分享 0</li>
+                                  </ul>
+                                  <span class="label label-danger">已发表</span>
+                                  <p>2020-1-14</p>
+                              </div>
+                              <div class="media-right">
+                                  <ul class="media-right-my">
+                                      <li><a href="">修改</a></li>
+                                      <li><a href="">数据</a></li>
+                                      <li><a href="">更多</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <!--foreach  end-->
+
+
+                 </div>
+                  <!--专栏-->
+                  <div class="tab-pane" id="tab2">
+                      <p>译文：
+                          慈母用手中的针线，为远行的儿子赶制身上的衣衫。
+
+                          临行前一针针密密地缝缀，怕的是儿子回来得晚衣服破损。
+
+                          有谁敢说，子女像小草那样微弱的孝心，能够报答得了像春晖普泽的慈母恩情呢？
+
+                          母爱的伟大贯穿了中华上下五千年
+                          普天下最平凡的是母亲，最伟大的也是母亲。从来没有一种文字能写尽母爱，文章是有长短尽头的，而母爱，却是无痕的岁月，贯穿着我们生命的全部。</p>
+                  </div>
+                  <!--音频-->
+                  <div class="tab-pane" id="tab3">
+                      <p>译文：
+                          慈母用手中的针线，为远行的儿子赶制身上的衣衫。
+
+                          临行前一针针密密地缝缀，怕的是儿子回来得晚衣服破损。
+
+                          有谁敢说，子女像小草那样微弱的孝心，能够报答得了像春晖普泽的慈母恩情呢？
+
+                          母爱的伟大贯穿了中华上下五千年
+                          普天下最平凡的是母亲，最伟大的也是母亲。从来没有一种文字能写尽母爱，文章是有长短尽头的，而母爱，却是无痕的岁月，贯穿着我们生命的全部。</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+      //日期范围
+      laydate.render({
+          elem: '#renge'
+          ,range: true
+      });
+      jQuery.noConflict();
+      jQuery(function($){
+          $(".cl2").load("comen-left.html");
+          $(".top-nav li").click(function(){
+
+                  $(this).siblings('li').removeClass('selected');  		// 删除其他兄弟元素的样式
+                  $(this).addClass('selected');                            // 添加当前元素的样式
+
+
+          })
+      })
+
+  </script>
+</body>
+</html>
