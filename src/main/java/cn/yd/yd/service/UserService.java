@@ -7,5 +7,5 @@ import java.util.List;
 
 
 public interface UserService {
-      public List<User>  findList();//查询所有用户
+
 }

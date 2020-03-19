@@ -9,10 +9,5 @@ import javax.annotation.Resource;
 import java.util.List;
 @Service("userService")
 public class UserServiceImpl implements UserService {
-    @Resource
-    private UserDao userDao;
-    @Override
-    public List<User> findList() {
-        return userDao.findAll();
-    }
+
 }

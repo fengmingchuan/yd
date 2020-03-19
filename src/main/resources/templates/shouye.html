@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/shouye.css" rel="stylesheet"/>
-    <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/bootstrap.js"></script>
+
+    <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+    <script type="text/javascript"  th:src="@{/js/laydate/laydate.js}"></script>
 </head>
 <header>
     <div id="toubu">

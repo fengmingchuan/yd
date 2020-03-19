@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="en" xmlns:th="http://www.thymeleaf.org">
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
@@ -14,7 +14,7 @@
 
         }
         body{
-          background: red;
+
             width: 100%;
         }
 
@@ -74,7 +74,7 @@
    <div class="container">
        <!--右 上-->
        <div class="row">
-           <div class="col-md-2 cl2"></div>
+           <div class="col-md-2 cl2"  th:insert="comen-left.html"></div>
            <div class="col-md-10 c10">
                <div class="row " style="margin-left: 16px;margin-bottom: 20px" >
                  <h4>今天是你在li哩的第0天</h4>
@@ -224,7 +224,7 @@
 
        jQuery.noConflict();
        jQuery(function($){
-           $(".cl2").load("comen-left.html");
+
            $("#carouselMenu").carousel({
                interval: 500,
                wrap: true

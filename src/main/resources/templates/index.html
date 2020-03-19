@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en"  >
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport"
@@ -64,7 +64,7 @@
 <body>
  <div class=" container ">
      <div class="row content">
-         <div class="col-md-2 cl2"></div>
+         <div class="col-md-2 cl2" th:insert="comen-left.html"></div>
          <div class="col-md-10 cl10 " style="padding-left: 200px">
              <!--上传视频-->
              <div class="right-upload">
@@ -109,7 +109,7 @@
 <script>
     jQuery.noConflict();//让渡$的使用权，其他脚本库可以使用$
      jQuery(function($){
-         $(".cl2").load("comen-left.html");
+
          $(".cz-left").click(function(){
              $(".cz-left-next").toggle();
          })
