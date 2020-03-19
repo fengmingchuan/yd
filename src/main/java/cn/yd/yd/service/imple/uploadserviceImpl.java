@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 @Service("uploadservice")
 public class uploadserviceImpl implements uploadservice {
     @Resource
-    uploadMapper um;
+   public   uploadMapper um;
 
     @Override
     public int insertMessage(Message message) {

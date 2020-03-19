@@ -2,6 +2,7 @@ package cn.yd.yd.controller;
 
 import cn.yd.yd.pojo.Message;
 import cn.yd.yd.service.imple.uploadserviceImpl;
+import cn.yd.yd.service.uploadservice;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,7 +18,7 @@ import java.util.Date;
 @Controller
 public class UserController {
 @Resource
-    public uploadserviceImpl us;
+    public uploadservice us;
 
     @RequestMapping("/index")
     public   String  userList(){
@@ -39,6 +40,7 @@ public class UserController {
                 message.setUser_id(1L);
                 message.setMessage_title(message_title);
                 message.setMessage_text(path+"/"+fileName);
+                System.out.println("路径"+path+"/"+fileName);
                int i = us.insertMessage(message);
                if (i>0){
                    return "index";
