@@ -12,4 +12,15 @@
         <result column="message_transmit" jdbcType="INTEGER" property="message_transmit" />
         <result column="message_collectCount" jdbcType="INTEGER" property="message_collectCount" />
     </resultMap>
+    <insert id="addMessage" parameterType="Message">
+
+    insert into message (user_id, message_title,
+      message_date, message_type, message_like,
+      message_look, message_transmit, message_collectCount,
+      message_text)
+    values (1, #{message_title,jdbcType=VARCHAR},
+      #{message_date,jdbcType=DATE}, 1, 0,
+      0, 0, 0,
+      0
+    </insert>
 </mapper>

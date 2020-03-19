@@ -27,4 +27,8 @@ spring:
     multipart:
       max-file-size: 100000000
       max-request-size: 100000000
+
 devtools: true
+mybatis:
+  type-aliases-package: cn.yd.yd.pojo
+  mapper-locations: classpath:mapper/*.xml
