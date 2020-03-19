@@ -20,10 +20,11 @@ spring:
       prefix: /
       static-path-pattern: /static/**
     static-path-pattern: /**
-  jpa:
-    hibernate:
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true
+
   thymeleaf:
     cache: false
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 10MB
+devtools: true
