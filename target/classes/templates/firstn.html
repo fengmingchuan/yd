@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="en" xmlns:th="http://www.thymeleaf.org">
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
@@ -14,7 +14,7 @@
 
         }
         body{
-          background: red;
+
             width: 100%;
         }
 
@@ -74,7 +74,7 @@
    <div class="container">
        <!--右 上-->
        <div class="row">
-           <div class="col-md-2 cl2"></div>
+           <div class="col-md-2 cl2"  th:insert="comen-left.html"></div>
            <div class="col-md-10 c10">
                <div class="row " style="margin-left: 16px;margin-bottom: 20px" >
                  <h4>今天是你在li哩的第0天</h4>
@@ -93,14 +93,14 @@
                                <li data-target="#carouselMenu" data-slide-to="7" ></li>
                            </ol>
                            <div class="carousel-inner">
-                               <div class="item active"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
-                               <div class="item"><img src="img/img8.jpg" alt=""/></div>
+                               <div class="item active"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
+                               <div class="item"><img src="image/img8.jpg" alt=""/></div>
                            </div>
                            <a class="left  carousel-control " href="#carouselMenu" data-slide="prev"><span><svg t="1578806262327" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3367" width="32" height="32"><path d="M190.3221875 507.30875c0-7.7296875 2.9690625-14.540625 8.9090625-20.4590625l414.9571875-414.9778125c5.94-5.94 12.7734375-8.8846875 20.5021875-8.8846875s14.540625 2.945625 20.4796875 8.8846875l44.5171875 44.540625c5.94 5.94 8.908125 12.75 8.908125 20.4796875 0 7.708125-2.9690625 14.540625-8.908125 20.4796875l-349.959375 349.959375 349.9621875 349.9378125c5.94 5.94 8.908125 12.75 8.908125 20.4796875s-2.9690625 14.5621875-8.9090625 20.5021875l-44.51625 44.51625c-5.94 5.94-12.75 8.908125-20.4796875 8.908125s-14.5621875-2.9690625-20.5021875-8.9090625l-414.9571875-414.958125c-5.938125-5.938125-8.9090625-12.7734375-8.9090625-20.5021875z" p-id="3368"></path></svg></span></a>
                            <a class="carousel-control right" href="#carouselMenu" data-slide="next"><span><svg t="1578806290738" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3583" width="32" height="32"><path d="M648.41999999 512l-378.48-378.48a59.46 59.46 0 1 1 84.12-84.12L774.59999999 470a59.46 59.46 0 0 1 0 84L353.99999999 974.6a59.46 59.46 0 1 1-84-84.11999999L648.35999999 512z" p-id="3584"></path></svg></span></a>
@@ -224,7 +224,7 @@
 
        jQuery.noConflict();
        jQuery(function($){
-           $(".cl2").load("comen-left.html");
+
            $("#carouselMenu").carousel({
                interval: 500,
                wrap: true
