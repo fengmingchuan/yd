@@ -1,6 +1,8 @@
 package cn.yd.yd.controller;
 
 import cn.yd.yd.pojo.Message;
+import cn.yd.yd.pojo.User;
+import cn.yd.yd.service.UserService;
 import cn.yd.yd.service.imple.uploadserviceImpl;
 import cn.yd.yd.service.uploadservice;
 import org.springframework.stereotype.Controller;
@@ -19,7 +21,8 @@ import java.util.Date;
 public class UserController {
 @Resource
     public uploadservice us;
-
+    @Resource
+    private UserService userService;
     @RequestMapping("/index")
     public   String  userList(){
         return  "index";
@@ -53,4 +56,54 @@ public class UserController {
        }
        return  "index";
     }
+
+
+    //首页
+    @RequestMapping("/firstn")
+    public String firstn(){
+
+        return "firstn";
+    }
+    //进入登录页面
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
+    //登录判断
+    @RequestMapping("/logins")
+    public String login(String user_name,String user_pwd){
+        System.out.println("123");
+        User user = userService.selectUserNameAndUserPwdLogin(user_name, user_pwd);
+
+        if(user!=null){
+
+            return "/index";
+        }
+        System.out.println("456");
+        return "register";
+    }
+    //注册页面
+    @RequestMapping("/register")
+    public String register(){
+        return "register";
+    }
+
+    //注册判断
+    @RequestMapping("/regters")
+    public String regters(User user){
+        User user2=userService.selectUsername(user.getUser_name());
+        if(user2!=null){
+            return "redirect:register";
+        }else{
+            int count=userService.insertUserinfo(user);
+            if(count>0){
+                return "firstn";
+            }
+        }
+        return "login";
+    }
+
+
+
+
 }

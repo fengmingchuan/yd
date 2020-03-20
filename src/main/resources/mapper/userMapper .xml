@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yd.yd.dao.UserDao">
+    <select id="selectUsername" resultType="User">
+        select * from user where user_name=#{user_name}
+    </select>
+    <!--判断用户名密码是否正确-->
+    <select id="selectUserNameAndUserPwdLogin" resultType="User">
+    select * from fta.user where user_name=#{user_name} and user_pwd=#{user_pwd}
+    </select>
+
+    <insert id="insertUserinfo">
+        INSERT INTO fta.user (user_name, 	user_pwd)VALUES(#{user_name}, #{user_pwd});
+    </insert>
+
+</mapper>
