@@ -33,4 +33,6 @@ public class Message {
 
     private String message_text;
 
+    private   User user;
+
 }

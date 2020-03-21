@@ -19,7 +19,7 @@ spring:
       suffix: .html
       prefix: /
       static-path-pattern: /static/**
-    static-path-pattern: /**
+
 
   thymeleaf:
     cache: false
@@ -27,6 +27,8 @@ spring:
     multipart:
       max-file-size: 100000000
       max-request-size: 100000000
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/, classpath:/static/, classpath:/public/,file:D:\upload
 
 devtools: true
 mybatis:

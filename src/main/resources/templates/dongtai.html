@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+    <script type="text/javascript"  th:src="@{/js/laydate/laydate.js}"></script>
+    <style>
+        #b{
+
+            margin: 0 auto;
+            text-align:center;
+            border: solid black 1px;
+        }
+        .tu{
+            width: 500px;
+            height: 80px;
+            padding: 15px;
+            border: solid black 1px;
+        }
+        #p{
+
+            margin: 0 auto;
+            text-align:center;
+            padding: 5px;
+
+            width: 500px;
+        }
+        .neirong{
+            width: 500px;
+            height: 200px;
+            border: solid black 1px;
+        }
+        .dt{
+            border: solid 1px black;
+        }
+        .tubiao{
+            width: 500px;
+            height: 50px;
+            border: solid 1px black;
+        }
+        .tubiao button{
+            margin: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="b">
+
+    <div id="p">
+        <div class="dh1">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#w1" data-toggle="tab">全部</a></li>
+                <li><a href="#w2" data-toggle="tab">专栏</a></li>
+                <li><a href="#w3" data-toggle="tab">投稿视频</a></li>
+                <li><a href="#w4" data-toggle="tab">追番追剧</a></li>
+                <li><a href="#w5" data-toggle="tab">小视频</a></li>
+                <li><a href="#w6" data-toggle="tab">图片</a></li>
+
+
+            </ul>
+            <div class="tab-content dt" >
+                <div class="tab-pane fade in active" id="w1">
+                    <!--循环显示-->
+                    <div th:each="dtshuju : ${list}">
+                        <div class="tu">
+                            <div  style="float: left">
+                                <img class="img-circle image-responsive" th:text="${dtshuju.user.user_image}" alt="头像" style="width: 50px;height: 50px"/><a th:text="${dtshuju.user.user_name}"></a>
+                            </div>
+                        </div>
+                        <div class="neirong">
+                            <!--显示内容-->
+                       <p th:text="${dtshuju.message_title}"></p>
+                            <div>
+                                <p th:text="${dtshuju.message_text}"></p>
+                            </div>
+
+                        </div>
+                        <div class="tubiao">
+                            <div style="float: left">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share" th:text="${dtshuju.user.user_name}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share"  th:text="${dtshuju.message_collectCount}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"  th:text="${dtshuju.message_like}"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+<!--结尾-->
+                </div>
+                <div class="tab-pane fade  in" id="w2">
+                    <!--循环显示-->
+                    <div th:each="dtshuju : ${list}">
+                        <div class="tu">
+                            <div  style="float: left">
+                                <img class="img-circle image-responsive" th:text="${dtshuju.user.user_image}" alt="头像" style="width: 50px;height: 50px"/><a th:text="${dtshuju.user.user_name}"></a>
+                            </div>
+                        </div>
+                        <div class="neirong">
+                            <!--显示内容-->
+                           <p th:text="${dtshuju.message_title}"></p>
+                            <div>
+                                <p th:text="${dtshuju.message_text}"></p>
+                            </div>
+
+                        </div>
+                        <div class="tubiao">
+                            <div style="float: left">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share" th:text="${dtshuju.user.user_name}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share"  th:text="${dtshuju.message_collectCount}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"  th:text="${dtshuju.message_like}"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--结尾-->
+            </div>
+                <div class="tab-pane fade  in" id="w3">
+                    <!--循环显示-->
+                    <div th:each="dtshuju : ${list}">
+                        <div class="tu">
+                            <div  style="float: left">
+                                <img class="img-circle image-responsive" th:text="${dtshuju.user.user_image}" alt="头像" style="width: 50px;height: 50px"/><a th:text="${dtshuju.user.user_name}"></a>
+                            </div>
+                        </div>
+                        <div class="neirong">
+                            <!--显示内容-->
+
+                          <p th:text="${dtshuju.message_title}"></p>
+
+                            <div>
+                                <p th:text="${dtshuju.message_text}"></p>
+                            </div>
+
+                        </div>
+                        <div class="tubiao">
+                            <div style="float: left">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share" th:text="${dtshuju.user.user_name}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share"  th:text="${dtshuju.message_collectCount}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"  th:text="${dtshuju.message_like}"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--结尾-->
+            </div>
+                <div class="tab-pane fade  in" id="w4">
+                    <!--循环显示-->
+                    <div th:each="dtshuju : ${list}">
+                        <div class="tu">
+                            <div  style="float: left">
+                                <img class="img-circle image-responsive" th:text="${dtshuju.user.user_image}" alt="头像" style="width: 50px;height: 50px"/><a th:text="${dtshuju.user.user_name}"></a>
+                            </div>
+                        </div>
+                        <div class="neirong">
+                            <!--显示内容-->
+                      <p th:text="${dtshuju.message_title}"></p>
+                            <div>
+                                <p th:text="${dtshuju.message_text}"></p>
+                            </div>
+
+                        </div>
+                        <div class="tubiao">
+                            <div style="float: left">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share" th:text="${dtshuju.user.user_name}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share"  th:text="${dtshuju.message_collectCount}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"  th:text="${dtshuju.message_like}"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--结尾-->
+            </div>
+                <div class="tab-pane fade  in" id="w5">
+                    <!--循环显示-->
+                    <div th:each="dtshuju : ${list}">
+                        <div class="tu">
+                            <div  style="float: left">
+                                <img class="img-circle image-responsive" th:text="${dtshuju.user.user_image}" alt="头像" style="width: 50px;height: 50px"/><a th:text="${dtshuju.user.user_name}"></a>
+                            </div>
+                        </div>
+                        <div class="neirong">
+                            <!--显示内容-->
+                           <p th:text="${dtshuju.message_title}"></p>
+                            <div>
+                                <p th:text="${dtshuju.message_text}"></p>
+                            </div>
+
+                        </div>
+                        <div class="tubiao">
+                            <div style="float: left">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share" th:text="${dtshuju.user.user_name}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share"  th:text="${dtshuju.message_collectCount}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"  th:text="${dtshuju.message_like}"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--结尾-->
+            </div>
+                <div class="tab-pane fade  in" id="w6">
+                    <!--循环显示-->
+                    <div th:each="dtshuju : ${list}">
+                        <div class="tu">
+                            <div  style="float: left">
+                                <img class="img-circle image-responsive" th:text="${dtshuju.user.user_image}" alt="头像" style="width: 50px;height: 50px"/>
+                                <a th:text="${dtshuju.user.user_name}"></a>
+                            </div>
+                        </div>
+                        <div class="neirong">
+                            <!--显示内容-->
+                           <p th:text="${dtshuju.message_title}"></p>
+                            <div>
+                                <div th:text="${${dtshuju.message_text}}"></div>
+                            </div>
+
+                        </div>
+                        <div class="tubiao">
+                            <div style="float: left">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share" th:text="${dtshuju.user.user_name}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-share"  th:text="${dtshuju.message_collectCount}"></span>
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-heart"  th:text="${dtshuju.message_like}"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--结尾-->
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

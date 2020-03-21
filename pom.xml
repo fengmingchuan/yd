@@ -102,23 +102,23 @@
     </dependencies>
 
     <build>
-        <resources>
+      <!--  <resources>
             <resource>
-                <directory>src/main/java</directory><!--java文件的路径-->
+                <directory>src/main/java</directory>&lt;!&ndash;java文件的路径&ndash;&gt;
                 <includes>
                     <include>**/*.*</include>
                 </includes>
-                <!-- <filtering>false</filtering>-->
+                &lt;!&ndash; <filtering>false</filtering>&ndash;&gt;
             </resource>
             <resource>
-                <directory>src/main/resources</directory><!--资源文件的路径-->
+                <directory>src/main/resources</directory>&lt;!&ndash;资源文件的路径&ndash;&gt;
                 <includes>
                     <include>**/*.*</include>
                 </includes>
-                <!-- <filtering>false</filtering>-->
+                &lt;!&ndash; <filtering>false</filtering>&ndash;&gt;
             </resource>
 
-        </resources>
+        </resources>-->
 
         <plugins>
             <plugin>

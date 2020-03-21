@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.yd.yd.dao.DongtaiMapper">
+    <resultMap id="BaseResultMap" type="cn.yd.yd.pojo.Message">
+        <id column="message_id" jdbcType="BIGINT" property="message_id" />
+        <result column="user_id" jdbcType="BIGINT" property="user_id" />
+        <result column="message_title" jdbcType="VARCHAR" property="message_title" />
+        <result column="message_date" jdbcType="DATE" property="message_date" />
+        <result column="message_type" jdbcType="INTEGER" property="message_type" />
+        <result column="message_like" jdbcType="INTEGER" property="message_like" />
+        <result column="message_look" jdbcType="INTEGER" property="message_look" />
+        <result column="message_transmit" jdbcType="INTEGER" property="message_transmit" />
+        <result column="message_collectCount" jdbcType="INTEGER" property="message_collectCount" />
+
+        <association property="user" javaType="User">
+            <id column="user_id" jdbcType="BIGINT" property="user_id" />
+            <result column="user_name" jdbcType="VARCHAR" property="user_name" />
+            <result column="user_grade" jdbcType="INTEGER" property="user_grade" />
+            <result column="user_pwd" jdbcType="VARCHAR" property="user_pwd" />
+            <result column="user_date" jdbcType="DATE" property="user_date" />
+            <result column="user_image" jdbcType="VARCHAR" property="user_image" />
+            <result column="user_integral" jdbcType="INTEGER" property="user_integral" />
+            <result column="user_describe" jdbcType="VARCHAR" property="user_describe" />
+            <result column="user_code" jdbcType="VARCHAR" property="user_code" />
+
+
+        </association>
+    </resultMap>
+<select id="dtlist"  resultMap="BaseResultMap">
+    SELECT u.user_name,m.* FROM Message m  inner join User u WHERE m.user_id=u.user_id
+</select>
+</mapper>
