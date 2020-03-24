@@ -13,5 +13,7 @@ public interface UserDao {
 
     //注册用户
     int insertUserinfo(User user);
+    //根据用户Id查询用户信息
+    User selectUserInfoById(int user_id);
 
 }

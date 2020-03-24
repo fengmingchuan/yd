@@ -19,6 +19,7 @@ public class dongtaicontroller {
         return  "shouye";
     }
 
+    /*动态页面*/
     @RequestMapping("dongtai")
     public String dtlist(Model model){
         List<Message> list=dt.dongtailist();

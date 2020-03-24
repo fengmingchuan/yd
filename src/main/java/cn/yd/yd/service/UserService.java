@@ -14,4 +14,6 @@ public interface UserService {
     User selectUserNameAndUserPwdLogin(@Param("user_name") String user_name,@Param("user_pwd") String user_pwd);
     //注册
     int insertUserinfo(User user);
+    //根据用户Id查询用户信息
+    User UserInfoById(int user_id);
 }

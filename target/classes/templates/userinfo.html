@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <link  rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"   />
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}"></script>
+    <script type="text/javascript"  th:src="@{/js/laydate/laydate.js}"></script>
+    <style>
+        #b{
+            border:1px solid black;
+            width: 750px;
+            height: 800px;
+            margin: 0 auto;
+            text-align:center;
+
+        }
+        #a{
+            border:1px solid black;
+            width: 150px;
+            height: 800px;
+            float: left;
+        }
+        #a ul li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            list-style: none;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="b">
+    <div id="a">
+        <ul>
+            <li><a>首页</a></li>
+            <li><a>我的信息</a></li>
+            <li><a>大会员</a></li>
+            <li><a>会员积分</a></li>
+            <li><a>个人空间</a></li>
+            <li><a>账号安全</a></li>
+            <li><a>我的头像</a></li>
+
+        </ul>
+
+
+    </div>
+    <div >
+        <table >
+            <tr>
+                <th>  昵称：<input type="text" th:value="${user.getUser_name()}" /> </th>
+            </tr>
+            <tr>
+                <th>  用户名：<p th:value="${user.getUser_id()}"></p> </th>
+            </tr>
+            <tr>
+                <th>    我的签名：<input type="text" th:value="${user.getUser_code()}"/> </th>
+            </tr>
+            <tr>
+                <th>   姓别：<label><input type="radio" name="sex" value="男生">男生</label>
+                    <label><input type="radio" name="sex" value="女生">女生</label>
+                </th>
+            </tr>
+            <tr>
+                <th>出生日期：<input type="date" th:value="${user.getUser_date()}" /> </th>
+            </tr>
+        </table>
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
