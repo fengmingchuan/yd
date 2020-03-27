@@ -57,13 +57,13 @@
     <div >
         <table >
             <tr>
-                <th>  昵称：<input type="text" th:value="${user.getUser_name()}" /> </th>
+                <th>  昵称：<input type="text" th:text="${user.User_name}" /> </th>
             </tr>
             <tr>
-                <th>  用户名：<p th:value="${user.getUser_id()}"></p> </th>
+                <th>  用户名：<p th:text="${user.User_id}"></p> </th>
             </tr>
             <tr>
-                <th>    我的签名：<input type="text" th:value="${user.getUser_code()}"/> </th>
+                <th>    我的签名：<input type="text" th:text="${user.User_code}"/> </th>
             </tr>
             <tr>
                 <th>   姓别：<label><input type="radio" name="sex" value="男生">男生</label>
@@ -71,7 +71,7 @@
                 </th>
             </tr>
             <tr>
-                <th>出生日期：<input type="date" th:value="${user.getUser_date()}" /> </th>
+                <th>出生日期：<input type="date" th:text="${user.User_date}" /> </th>
             </tr>
         </table>
 

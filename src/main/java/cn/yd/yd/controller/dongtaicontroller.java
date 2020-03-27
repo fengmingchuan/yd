@@ -13,12 +13,6 @@ import java.util.List;
 public class dongtaicontroller {
     @Resource
     public Dongtaiservice dt;
-
-    @RequestMapping("shouye")
-    public   String  userList(){
-        return  "shouye";
-    }
-
     /*动态页面*/
     @RequestMapping("dongtai")
     public String dtlist(Model model){
