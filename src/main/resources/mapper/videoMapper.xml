@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yd.yd.dao.videoMapper">
+    <select id="selectByUserId" resultType="Message">
+           SELECT  SUM(message_like) message_like ,SUM(message_look)  message_look,SUM(message_transmit) message_transmit,SUM(message_collectCount) message_collectCount FROM message WHERE user_id=1
+    </select>
+</mapper>

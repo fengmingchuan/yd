@@ -1,14 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+        /* 让页面所有元素的padding和margin都设置为0 */
+        *{margin:0;padding:0;box-sizing:border-box;}
+        /* 设置背景图，字体设置为微软雅黑 */
+        body{background:url(image/timg.jpg) no-repeat fixed top;
+            background-size:100% 100%;
+            font-family: "微软雅黑", sans-serif;}
+
+        /* 整个登录框的css，并使用绝对定位居中 */
+        .login {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0 0 -150px;
+            width:300px;
+            height:300px;
+        }
+        /* 前面分析过的h1标签的css，text-shadow设置阴影使文字更好看，letter-spacing设置字符间距 */
+        .login h1 { color:#ebebeb; text-shadow: 0px 10px 8px #ebebeb; letter-spacing:2px;text-align:center;margin-bottom:20px; }
+        /* 两个输入框的css，border属性设置边框线粗细以及颜色，border-radius设置边框的圆角角度 */
+        input{
+            padding:10px;
+            width:100%;
+            color:white;
+            margin-bottom:10px;
+            background-color:#555555;
+            border: 1px solid black;
+            border-radius:4px;
+            letter-spacing:2px;
+        }
+        /* 登录按钮的css，cursor:pointer当鼠标移到按钮上面时变成小手形状 */
+        form .log{
+            width:100%;
+            padding:10px;
+            background-color:#CDC673;
+            border:1px solid black;
+            border-radius:4px;
+            cursor:pointer;
+        }
+
+    </style>
+
 </head>
 <body>
-<form action="/regters">
-    用户名:<input type="text" name="user_name"/>
-    密码:<input type="text" name="user_pwd"/>
-    <input type="submit" value="提交"/>
-</form>
+<!--<div class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav ">
+        <li> <a href=""><img src="" alt=""/>主站</a></li>
+        <li><a href="">番剧</a></li>
+        <li><a href="">游戏中心</a></li>
+        <li><a href="">会员购</a></li>
+        <li><a href="">漫画</a></li>
+        <li><a href="">赛事</a></li>
+        <li><a href=""><img src="" alt=""/> 下载app</a></li>
+        <li>
+            <form class="navbar-form " role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="search"/>
+                </div>
+                <button type="submit" class="btn btn-primary">搜索</button>
+            </form>
+        </li>
+        <li><a href=""><img src="../static/image/头像测试.jpg" alt="" style="width: 30px"/></a></li>
+        <li><a href="">大会员</a></li>
+        <li><a href="">消息</a></li>
+        <li><a href="">动态</a></li>
+        <li><a href="">收藏</a></li>
+        <li><a href="">历史</a></li>
+        <li><a href="">创作中心</a></li>
+
+    </ul>
+    <div style="padding-top:7px">
+        <a href=" "><button type="button" class="btn btn-danger">投稿</button></a>
+
+    </div>
+</div>-->
+<!--
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#">主站</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="#">番剧</a></li>
+                <li><a href="#">游戏</a></li>
+                <li><a href="#">漫画</a></li>
+                <li><a href="#">赛事</a></li>
+                <li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search"/>
+                        </div>
+                        <button type="submit" class="btn btn-default" style="margin-bottom: 8px">搜索</button>
+                    </form>
+                </li>
+                <li>
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand"><img alt="" src=""  style="height: 20px;width: 25px"></a>
+                        <a href=""  class="navbar-brand"> </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href=" ">会员</a></li>
+                <li><a href=" ">消息</a></li>
+                <li><a href=" ">收藏</a></li>
+                <li><a href=" ">历史</a></li>
+                <li><a href=" ">创作中心</a></li>
+            </ul>&lt;!&ndash;
+            <div style="padding-top:7px">
+                <a href=" "><button type="button" class="btn btn-danger">投稿</button></a>
+
+            </div>&ndash;&gt;
+        </div>&lt;!&ndash;/.nav-collapse &ndash;&gt;
+
+    </div>&lt;!&ndash;/.container &ndash;&gt;
+
+</div>
+-->
+
+
+
+<div class="login">
+    <h1>Register</h1>
+
+    <form action="/regters" method="post">
+
+          <input type="text" name="user_name" id="user_name" placeholder="用户名" required="required">
+
+          <input type="password" name="user_pwd" id="user_pwd" placeholder="密  码" required="required">
+        <button class="log" type="submit"  >注册</button>
+
+
+    </form>
+</div>
+
 </body>
 </html>

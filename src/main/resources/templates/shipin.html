@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" xmlns:th="http://www.thymeleaf.org" >
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+     /*   div{
+            border:1px solid silver;
+        }*/
+        .container{
+
+        }
+    </style>
+</head>
+<body>
+<!--
+<div class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav ">
+        <li> <a href=""><img src="" alt=""/>主站</a></li>
+        <li><a href="">番剧</a></li>
+        <li><a href="">游戏中心</a></li>
+        <li><a href="">会员购</a></li>
+        <li><a href="">漫画</a></li>
+        <li><a href="">赛事</a></li>
+        <li><a href=""><img src="" alt=""/> 下载app</a></li>
+        <li>
+            <form class="navbar-form " role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="search"/>
+                </div>
+                <button type="submit" class="btn btn-primary">搜索</button>
+            </form>
+        </li>
+        <li><a href=""><img src="../static/image/头像测试.jpg" alt="" style="width: 30px"/></a></li>
+        <li><a href="">大会员</a></li>
+        <li><a href="">消息</a></li>
+        <li><a href="">动态</a></li>
+        <li><a href="">收藏</a></li>
+        <li><a href="">历史</a></li>
+        <li><a href="">创作中心</a></li>
+
+    </ul>
+    <div style="padding-top:7px">
+        <a href=" "><button type="button" class="btn btn-danger">投稿</button></a>
+
+    </div>
+</div>
+-->
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="/lili">主站</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="#">番剧</a></li>
+                <li><a href="#">游戏</a></li>
+                <li><a href="#">漫画</a></li>
+                <li><a href="#">赛事</a></li>
+                <li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search"/>
+                        </div>
+                        <button type="submit" class="btn btn-default" style="margin-bottom: 2px">搜索</button>
+                    </form>
+                </li>
+                <li>
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand"><img alt=" " src="  "  style="height: 20px;width: 25px"></a>
+                        <a href=""  class="navbar-brand">Username</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href=" ">会员</a></li>
+                <li><a href=" ">消息</a></li>
+                <li><a href=" ">收藏</a></li>
+                <li><a href=" ">历史</a></li>
+                <li><a href="/firstn">创作中心</a></li>
+            </ul>
+            <div style="padding-top:7px">
+                <a href=" "><button type="button" class="btn btn-danger">投稿</button></a>
+
+            </div>
+        </div><!--/.nav-collapse -->
+
+    </div><!--/.container -->
+
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div>
+                <h2><span>视频标题</span></h2>
+                <div>
+                    <a href="">分区</a>><span>2020年1月10日16:02:06</span><span>排名</span>
+                </div>
+                <div>
+                    <span>播放量 </span><img src="" alt=""/><span>未经授权，禁止转载</span>
+                </div>
+                <div>
+                    <script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+                    <div id='plv_e785b2c81c9e018296671a1287e99615_e'></div>
+                    <script>
+                        var player = polyvObject('#plv_e785b2c81c9e018296671a1287e99615_e').videoPlayer({
+                            'width':' ',
+                            'height':' ',
+                            'vid' : 'e785b2c81c9e018296671a1287e99615_e' ,
+                            'forceH5':true
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div>
+                <div class="navbar navbar-default" role="navigation">
+                    <ul class="nav navbar-nav ">
+                        <li> <a href=""><img src="" alt=""/>点赞</a></li>
+                        <li> <a href=""><img src="" alt=""/>打赏</a></li>
+                        <li> <a href=""><img src="" alt=""/>收藏</a></li>
+                        <li> <a href=""><img src="" alt=""/>转发</a></li>
+                        <li> <a href=""><img src="" alt=""/>举报</a></li>
+                    </ul>
+
+                </div>
+                <div style="margin-top: 22px">
+                    <span>视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介视频简介</span>
+                </div>
+                <div style="margin-top: 22px">
+                    <img src="../static/image//广告.png" alt="" width="100%" height="80px"/>
+                </div>
+
+                <div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="nav navbar-nav">
+                <li> <img src="../static/image//头像测试.jpg" alt="" style="width: 60px"/></li>
+                <li>用户名</li>
+                <li><img src="" alt=""/>发消息</li>
+                <li>简介：我是是是是是</li>
+                <li><a href="">关注</a></li>
+            </ul>
+
+            <div>
+                <img src="../static/image/广告.png " alt="" style="width: 100%"/>
+
+                   <h2>视频推荐</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../static/image/广告.png " alt="" style="width: 130px;height: 80px"/>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="">视频标题</a>
+                        <br/>
+                        <a href="">作者名字</a>
+                        <br/>
+                        <span>播放量 </span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
